@@ -59,7 +59,20 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         });
         if (valid) {
-            alert('Pesan terkirim! Terima kasih.');
+
+            const name = document.getElementById("name").value;
+            const email = document.getElementById("email").value;
+            const message = document.getElementById("message").value;
+
+            const phone = "6285715169864"; // ganti dengan nomor WhatsApp kamu
+
+            const url = "https://wa.me/" + phone + "?text="
+            + "Nama: " + name + "%0a"
+            + "Email: " + email + "%0a"
+            + "Pesan: " + message;
+
+            window.open(url, "_blank");
+
             form.reset();
         }
     });
