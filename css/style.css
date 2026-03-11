@@ -59,6 +59,14 @@ nav {
     color: var(--color-primary);
 }
 
+/* icon styling for navigation */
+.nav-icon {
+    display: inline-block;
+    margin-right: 0.25rem;
+    font-size: 1.1rem;
+    vertical-align: middle;
+}
+
 .hamburger {
     display: none;
     background: none;
@@ -116,6 +124,17 @@ main {
     opacity: 0;
     transform: translateY(50px);
     transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+/* khusus untuk section tentang saya */
+#about-me .section-content {
+    flex-direction: column;
+    text-align: center;
+}
+#about-me img {
+    max-width: 150px;
+    border-radius: 50%;
+    margin-bottom: 1rem;
 }
 
 .content-section.visible {
