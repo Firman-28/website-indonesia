@@ -329,6 +329,10 @@ main {
     border-radius: 4px;
     transition: border-color 0.3s;
 }
+.form-group textarea {
+    resize: none;
+    height: 120px;
+}
 
 .form-group input:focus,
 .form-group textarea:focus {
