@@ -1,4 +1,37 @@
 document.addEventListener('DOMContentLoaded', function() {
+    document.addEventListener("DOMContentLoaded", function(){
+
+const items = document.querySelectorAll(".pancasila-item");
+
+const lightbox = document.getElementById("lightbox");
+const lightboxImg = document.getElementById("lightbox-img");
+const lightboxTitle = document.getElementById("lightbox-title");
+const lightboxDesc = document.getElementById("lightbox-desc");
+const closeBtn = document.querySelector(".lightbox-close");
+
+items.forEach(item => {
+
+    item.addEventListener("click", function(){
+
+        const img = this.getAttribute("data-img");
+        const title = this.getAttribute("data-title");
+        const desc = this.getAttribute("data-desc");
+
+        lightboxImg.src = img;
+        lightboxTitle.textContent = title;
+        lightboxDesc.textContent = desc;
+
+        lightbox.classList.add("active");
+
+    });
+
+});
+
+closeBtn.addEventListener("click", function(){
+    lightbox.classList.remove("active");
+});
+
+});
     // intersection observer for fade-in
     const sections = document.querySelectorAll('.content-section');
     const observer = new IntersectionObserver(entries => {
