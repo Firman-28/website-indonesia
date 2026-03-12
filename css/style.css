@@ -383,12 +383,19 @@ main {
 
 .lightbox-content {
     position: relative;
-    max-width: 90%;
+    max-width: 900px;
+    width: 90%;
+    background: white;
+    border-radius: 10px;
+    display: flex;
+    gap: 20px;
+    padding: 20px;
 }
 
 .lightbox-img {
-    max-width: 90%;
-    max-height: 60vh;
+    width: 50%;
+    max-height: 400px;
+    object-fit: cover;
     border-radius: 8px;
 }
 
@@ -432,6 +439,12 @@ footer {
     color: #ff2a6d;
     transform: translate(8px) scale(1.2);
 }
+.lightbox-caption {
+    width: 50%;
+    color: #333;
+    text-align: left;
+}
+{
 
 @media (max-width: 768px) {
     .nav-links {
@@ -449,4 +462,21 @@ footer {
     .hamburger {
         display: block;
     }
+}
+
+@media (max-width:768px){
+
+    .lightbox-content{
+        flex-direction: column;
+    }
+
+    .lightbox-img{
+        width:100%;
+    }
+
+    .lightbox-caption{
+        width:100%;
+    }
+
+}
 }
