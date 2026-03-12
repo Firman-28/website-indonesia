@@ -444,7 +444,7 @@ footer {
     color: #333;
     text-align: left;
 }
-{
+
 
 @media (max-width: 768px) {
     .nav-links {
@@ -478,5 +478,4 @@ footer {
         width:100%;
     }
 
-}
 }
