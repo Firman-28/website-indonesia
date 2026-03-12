@@ -373,6 +373,7 @@ main {
     justify-content: center;
     align-items: center;
     z-index: 1000;
+    overflow-y: auto;
 }
 
 .lightbox.active {
