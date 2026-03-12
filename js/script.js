@@ -27,10 +27,6 @@ document.addEventListener('DOMContentLoaded', function() {
 
 });
 
-    closeBtn.addEventListener("click", function(){
-     lightbox.classList.remove("active");
-});
-
 });
     // intersection observer for fade-in
     const sections = document.querySelectorAll('.content-section');
