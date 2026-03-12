@@ -21,6 +21,7 @@ document.addEventListener('DOMContentLoaded', function() {
             lightboxDesc.textContent = desc;
 
             lightbox.classList.add("active");
+            document.body.style.overflow ='hidden';
 
     });
 
