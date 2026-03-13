@@ -5,6 +5,35 @@ document.addEventListener('DOMContentLoaded', function() {
     const lightboxImg = document.getElementById("lightbox-img");
     const lightboxTitle = document.getElementById("lightbox-title");
     const lightboxDesc = document.getElementById("lightbox-desc");
+    const numbers = document.querySelectorAll(".number");
+
+        numbers.forEach(num=>{
+        let target = parseInt(num.textContent.replace(/\D/g,''));
+        let count = 0;
+
+        let update = ()=>{
+        count += target/100;
+
+        if(count < target){
+        num.textContent = Math.floor(count);
+        requestAnimationFrame(update);
+        }else{
+        num.textContent = target;
+        }
+        };
+
+    update();
+    });
+    document.querySelectorAll('a[href^="#"]').forEach(anchor=>{
+        anchor.addEventListener('click',function(e){
+        e.preventDefault();
+
+    document.querySelector(this.getAttribute('href'))
+        .scrollIntoView({
+        behavior:'smooth'
+        });
+        });
+    });
 
     // buka dari item pancasila
     document.querySelectorAll(".pancasila-item, .clickable-image").forEach(item => {
@@ -22,6 +51,12 @@ document.addEventListener('DOMContentLoaded', function() {
             lightbox.classList.add("active");
             document.body.style.overflow = 'hidden';
         });
+    });
+    document.addEventListener("keydown", function(e){
+        if(e.key === "Escape"){
+            lightbox.classList.remove("active");
+            document.body.style.overflow="auto";
+        }
     });
     
     // tutup lightbox
