@@ -616,28 +616,33 @@ opacity:1;
 
 @media (max-width:768px){
 
-body{
-padding:0 15px;
+.timeline::before{
+left:20px;
 }
 
-.content-section{
-padding:50px 0;
+.timeline-item{
+width:100%;
+left:0;
+padding-left:50px;
+padding-right:20px;
+text-align:left;
 }
 
-p{
-line-height:1.7;
+.timeline-item:nth-child(even){
+left:0;
 }
 
-img{
+.timeline-item::after{
+left:12px;
+right:auto;
+}
+
+.timeline-content{
+word-wrap:break-word;
+}
+
+}
+.timeline-content{
 max-width:100%;
-height:auto;
-}
-
-}
-@media (max-width:768px){
-
-.container{
-padding:0 20px;
-}
-
+box-sizing:border-box;
 }
