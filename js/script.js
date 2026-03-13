@@ -24,6 +24,19 @@ document.addEventListener('DOMContentLoaded', function() {
 
     update();
     });
+    const timelineItems = document.querySelectorAll(".timeline-item");
+
+    const timelineObserver = new IntersectionObserver(entries=>{
+        entries.forEach(entry=>{
+        if(entry.isIntersecting){
+        entry.target.classList.add("show");
+        }
+        });
+    });
+
+timelineItems.forEach(item=>{
+timelineObserver.observe(item);
+});
     document.querySelectorAll('a[href^="#"]').forEach(anchor=>{
         anchor.addEventListener('click',function(e){
         e.preventDefault();
