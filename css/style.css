@@ -88,6 +88,26 @@ nav {
     position: relative;
 }
 
+p{
+font-size:16px;
+line-height:1.8;
+max-width:750px;
+margin-bottom:1.5rem;
+color:#444;
+}
+
+p{
+text-align:justify;
+}
+
+body{
+font-family: 'Inter', sans-serif;
+}
+
+h1,h2,h3{
+font-family:'Poppins', sans-serif;
+}
+
 .hero .overlay {
     position: absolute;
     top: 0;
